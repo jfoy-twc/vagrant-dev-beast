@@ -12,9 +12,9 @@ Vagrant::Config.run do |config|
   	web_config.vm.network :hostonly, "192.168.10.10"
 
 	web_config.vm.provision :puppet do |puppet|
-	    puppet.manifests_path = "web-puppet/manifests"
+	    puppet.manifests_path = "puppet/web/manifests"
 	    puppet.manifest_file  = "default.pp"
-	    puppet.module_path = "web-puppet/modules"
+	    puppet.module_path = "puppet/web/modules"
 	    #puppet.options = "--verbose --debug"
 	    #puppet.options = "--verbose"
 	end
@@ -26,9 +26,9 @@ Vagrant::Config.run do |config|
 
   	db_config.vm.network :hostonly, "192.168.10.11"
 	db_config.vm.provision :puppet do |puppet|
-	    puppet.manifests_path = "db-puppet/manifests"
+	    puppet.manifests_path = "puppet/db/manifests"
 	    puppet.manifest_file  = "default.pp"
-	    puppet.module_path = "db-puppet/modules"
+	    puppet.module_path = "puppet/db/modules"
 	    #puppet.options = "--verbose --debug"
 	    #puppet.options = "--verbose"
 	end
