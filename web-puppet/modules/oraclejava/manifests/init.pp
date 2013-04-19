@@ -1,5 +1,4 @@
-# Java PPA and installation of Oracle Java JDK and Oracle Java JRE
-class oracleJVM {
+class oraclejava {
 	exec {'add oracleJVM-repo':
 		command => '/usr/bin/add-apt-repository ppa:webupd8team/java',
 		require => Package['python-software-properties'] 
