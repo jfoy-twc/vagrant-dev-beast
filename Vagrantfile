@@ -20,7 +20,7 @@ Vagrant::Config.run do |config|
 	end
   end
 
-  config.vm.define :web do |db_config|
+  config.vm.define :db do |db_config|
 	db_config.vm.box = "precise64"
   	db_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 

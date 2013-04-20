@@ -5,7 +5,7 @@ Exec {
 exec {'apt-get update':
 	command => '/usr/bin/apt-get update',
 	require => [
-		Exec{'add php54 apt-repo'}, 
+		Exec['add php54 apt-repo'], 
 		Exec['add oracleJVM-repo'],
 		Exec['add nginx-repo']
 	]
